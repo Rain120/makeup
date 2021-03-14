@@ -28,10 +28,10 @@ jobs:
       env:
         CI: true
 
-    - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@master
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: build
-          BUILD_SCRIPT: npm run build
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.0
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: build
+        BUILD_SCRIPT: npm run build
