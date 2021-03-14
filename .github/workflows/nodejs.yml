@@ -20,11 +20,18 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: build and deploy
+    - name: build
       run: |
         npm install
         # npm run changelog
         # npm run build --if-present
-        npm run deploy
       env:
         CI: true
+
+    - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
+          BUILD_SCRIPT: npm run build
