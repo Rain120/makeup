@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
+    "rootDir": "src",
     "module": "esnext",
     "target": "es5",
     "lib": ["es6", "dom"],
@@ -8,7 +9,6 @@
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDir": "src",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -19,14 +19,7 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
-    "paths": {
-      "apis": ["apis"],
-      "base": ["base"],
-      "components": ["components"],
-      "common": ["common"],
-      "src": ["src"],
-      "routes": ["routes"]
-    }
+    "paths": {}
   },
   "exclude": [
     "node_modules",
@@ -37,8 +30,5 @@
     "jest",
     "src/setupTests.ts"
   ],
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

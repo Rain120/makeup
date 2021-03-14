@@ -1,19 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './App.less';
+import './App.scss';
 
 const App: React.FC = () => {
   return (
-    <div className='App'>
+    <div className="App">
       <ul>
         <li>
-          <Link to='/'>Profile</Link>
+          <Link to="/">Profile</Link>
         </li>
         <li>
-          <Link to='/about'>About</Link>
+          <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to='/not-found'>NotFound</Link>
+          <Link to="/not-found">NotFound</Link>
         </li>
       </ul>
     </div>

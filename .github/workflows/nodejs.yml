@@ -23,7 +23,8 @@ jobs:
     - name: build and deploy
       run: |
         npm install
-        npm run changelog
-        npm run build --if-present
+        # npm run changelog
+        # npm run build --if-present
+        npm run deploy
       env:
         CI: true

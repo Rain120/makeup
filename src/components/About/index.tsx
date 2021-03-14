@@ -1,15 +1,10 @@
 import * as React from 'react';
-import './index.less';
+import './index.scss';
 
-export interface IAboutProps {
-}
+export interface IAboutProps {}
 
 export default class About extends React.Component<IAboutProps> {
   public render() {
-    return (
-      <div className='about-wrapper'>
-        About
-      </div>
-    );
+    return <div className="about-wrapper">About</div>;
   }
 }
