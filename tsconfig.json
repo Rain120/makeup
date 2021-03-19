@@ -13,13 +13,17 @@
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": false,
-    "strictNullChecks": true,
+    "strictNullChecks": false,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
-    "paths": {}
+    "skipLibCheck": true,
+    "typeRoots": ["src/@types/index.d.ts", "node_modules/@types/**"],
+    "paths": {
+      "@types": ["./src/@types"]
+    }
   },
   "exclude": [
     "node_modules",

@@ -15,6 +15,8 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   rules: {
     'comma-dangle': 'off',
+    'no-unused-vars': 'off',
+    'no-unused-expressions': 'off',
     semi: 'off',
     'space-before-function-paren': 'off',
   },

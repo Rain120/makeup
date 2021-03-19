@@ -1,3 +1,5 @@
 **/**.test.ts
 node_modules/
 .github/**
+public/**
+

@@ -1,22 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Menu } from 'antd';
+import { Icon } from '../common/icons';
 import './App.scss';
 
-const App: React.FC = () => {
+interface IProps {
+  className?: string;
+  active?: string;
+}
+
+const App: React.FC<IProps> = ({ className, active }: IProps) => {
+  const [current = 'index', setCurrent] = useState(active);
+
   return (
-    <div className="App">
-      <ul>
-        <li>
-          <Link to="/">Profile</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/not-found">NotFound</Link>
-        </li>
-      </ul>
-    </div>
+    <Menu
+      className={className}
+      onClick={(item: any) => {
+        setCurrent(item.key);
+      }}
+      selectedKeys={[current]}
+      mode={'horizontal'}
+    >
+      <Menu.Item key={'index'} icon={<Icon type={'icon-face-recognize'} />}>
+        <Link to="/">Face</Link>
+      </Menu.Item>
+      <Menu.Item key={'video'} icon={<Icon type={'icon-video'} />}>
+        <Link to="/video">Video</Link>
+      </Menu.Item>
+    </Menu>
   );
 };
 
